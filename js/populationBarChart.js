@@ -3,8 +3,9 @@ var margin = {top: 20, right: 160, bottom: 35, left: 30};
 var width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
-var svg = d3.select("body")
-  .append("svg")
+//var svg = d3.select("body")
+//  .append("svg")
+var svg = d3.select('svg')
   .attr("width", width + margin.left + margin.right)
   .attr("height", height + margin.top + margin.bottom)
   .append("g")
@@ -16,16 +17,9 @@ var populationData = []
 
 d3.csv("data/populationstructure6.csv", function(data) {
   console.log(data);
-  populationData = data.slice();
-
-
-
 
 
 //end paste
-
-/* Data in strings like it would be if imported from a csv */
-
 
 
 
