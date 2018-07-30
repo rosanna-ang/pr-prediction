@@ -2,13 +2,14 @@
 var dataset = [80, 100, 56, 120, 180, 30, 40, 120, 160];
 
 var svgWidth = 500, svgHeight = 300, barPadding = 5;
-var barWidth = (svgWidth / dataset.length);
+var barWidth = (svgWidth / dataset.length); // total width divided by number of items in dataset
 
 
 var svg = d3.select('svg')
    .attr("width", svgWidth)
    .attr("height", svgHeight);
 
+// create bar chart starting here
 var barChart = svg.selectAll("rect")
    .data(dataset)
    .enter()

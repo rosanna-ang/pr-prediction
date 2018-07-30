@@ -9,6 +9,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
 </head>
 <body>
@@ -26,11 +27,37 @@
       <h1>What's the population structure in Singapore over the past few years?</h1>
 
 
-        <svg width="800" height="500" class="bar-chart"></svg>
 
-        <script src="https://d3js.org/d3.v4.min.js"></script>
-        <script src="js/populationstructure.js"></script>
-        <br>
+        <!--start paste here-->
+
+
+        <style type="text/css">
+        svg {
+          font: 10px sans-serif;
+          shape-rendering: crispEdges;
+        }
+
+        .axis path,
+        .axis line {
+          fill: none;
+          stroke: #000;
+        }
+
+        path.domain {
+          stroke: none;
+        }
+
+        .y .tick line {
+          stroke: #ddd;
+        }
+        </style>
+
+        <script src="js/populationBarChart.js"></script>
+
+
+        <!--end paste here-->
+
+
       <a href="http://www.tablebuilder.singstat.gov.sg/publicfacing/createDataTable.action?refId=1347" id="source"> 	Source: Population and Population Structure, Department of Statistics Singapore </a>
 
     </div>
