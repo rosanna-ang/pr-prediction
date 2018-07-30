@@ -1,0 +1,129 @@
+img {
+
+}
+
+body {
+
+
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px grey;
+  font-family:Arial;
+}
+p {
+  color: white;
+  text-align: center;
+  font-family:Arial;
+  padding-left: 250px;
+  padding-right: 250px;
+  line-height: 1.6;
+}
+
+div {
+  width:100%;
+  border-style: solid;
+  border-color: red;
+}
+
+#homebackground {
+  background-image: url('images/singapore_skyline.jpg');
+  background-size:100%;
+  background-color: rgba(20,20,20,0.6);
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  //-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+
+}
+
+#home1 {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  text-align: center;
+
+}
+
+#navigation {
+  text-align: right;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+.btn {
+    color: #0099CC;
+    background: transparent;
+    border: 3px solid #0099CC;
+    border-radius: 6px;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+     background-color: #008CBA;
+     color: white;
+}
+
+#graphArea {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 35px;
+
+}
+
+#source {
+  text-align: center;
+  font-size: 14px;
+
+}
+
+a:visited {
+    color: grey;
+}
+
+a:link {
+    color: white;
+}
+
+a:hover {
+    color: #0099CC;
+}
+
+.bar-chart {
+    background-color: #C7D9D9;
+    }
