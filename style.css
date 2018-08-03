@@ -128,4 +128,31 @@ a:hover {
     background-color: #C7D9D9;
     }
 
-    
+.container {
+        width: 100%;
+        margin: auto;
+}
+    .one {
+        width: 50%;
+        float: left;
+        padding: 10px;
+        text-align: left;
+    }
+    .containerLeft {
+        padding: 10px;
+        text-align: left;
+        color: white;
+        font-family:Arial;
+        line-height: 1.6;
+    }
+    .two {
+        height: 200px;
+
+    }
+form {
+        padding: 10px;
+        text-align: left;
+        color: white;
+        font-family:Arial;
+        line-height: 1.6;
+    }
