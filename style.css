@@ -28,6 +28,10 @@ div {
   border-color: red;
 }
 
+#graphArea {
+  visibility: hidden;
+}
+
 #homebackground {
   background-image: url('images/singapore_skyline.jpg');
   background-size:100%;
