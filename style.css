@@ -3,7 +3,7 @@ img {
 }
 
 body {
-
+  //bgcolor: black;
 
 }
 
@@ -25,15 +25,19 @@ p {
 div {
   width:100%;
   border-style: solid;
-  border-color: red;
+  border-color: yellow;
 }
 
 #graphArea {
-  visibility: hidden;
+  //visibility: hidden;
+}
+
+.hideable {
+  //visibility: hidden;
 }
 
 #homebackground {
-  background-image: url('images/singapore_skyline.jpg');
+  background-image: url('images/singapore_skyline2.jpg');
   background-size:100%;
   background-color: rgba(20,20,20,0.6);
   background-blend-mode: darken;

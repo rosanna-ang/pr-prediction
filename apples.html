@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <title>d3.js learning</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-control" content="no-cache">
+  <title>SG Permanent Residence Predictor</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
   <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <link href="style.css" rel="stylesheet">
   <style type="text/css">
@@ -11,16 +16,18 @@
     shape-rendering: crispEdges;
     display: block;
     margin: auto;
+    fill:white;
   }
 
   .axis path,
   .axis line {
     fill: none;
-    stroke: #000;
+    //stroke: #000;
+    stroke: white;
   }
 
   path.domain {
-    stroke: none;
+    stroke: white;
   }
 
   .y .tick line {
@@ -30,10 +37,30 @@
 
 </head>
 <body>
-  <div id="div1" style="background-color: lightblue;">
-    <h1>Hello</h1>
+  <div id="homebackground">
+  <div id="navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="news.asp">How it Works</a></li>
+      <li><a href="supporting-analysis.html">Supporting Analysis</a></li>
+      <li><a href="news.asp">Data Reference</a></li>
+      <li><a href="about.asp">About the Author</a></li>
+    </ul>
   </div>
-  <div id="div2" style="background-color: lightgreen;">
+  <div id="div1">
+      <h1>What's the population structure in Singapore over the past few years?</h1>
+  </div>
+  <div id="div2" style="background-color: black;">
+    <h1>How many permanent residents have been accepted over the past few years?</h1>
+    <div id="divPR" ></div>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
+    <script src="js/stacked_bar.js"></script>
+
+    <script src="js/stacked_bar_plot.js"></script>
+
+  </div>
+  <div id="div3" class="hideable">
     <h1>Hello2</h1>
   </div>
 <script>
@@ -43,7 +70,7 @@ var width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
 
-var svg = d3.select("#div2")
+var svg = d3.select("#div1")
 //var svg = d3.select("#divSgpop")
   .append("svg")
   .attr("width", width + margin.left + margin.right)
@@ -102,11 +129,17 @@ var xAxis = d3.svg.axis()
 
 svg.append("g")
   .attr("class", "y axis")
+  .attr("font-family", "sans-serif")
+  .attr("font-size", "7px")
+  .attr("fill", "white")
   .call(yAxis);
 
 svg.append("g")
   .attr("class", "x axis")
   .attr("transform", "translate(0," + height + ")")
+  .attr("font-family", "sans-serif")
+//  .attr("font-size", "20px")
+  .attr("fill", "white")
   .call(xAxis);
 
 
@@ -153,6 +186,9 @@ legend.append("text")
   .attr("y", 9)
   .attr("dy", ".35em")
   .style("text-anchor", "start")
+  .attr("font-family", "sans-serif")
+//  .attr("font-size", "20px")
+  .attr("fill", "white")
   .text(function(d, i) {
     switch (i) {
       case 0: return "Non Residents";
@@ -184,6 +220,6 @@ tooltip.append("text")
   });
 
 </script>
-
+</div>
 </body>
 </html>
