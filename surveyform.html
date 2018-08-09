@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form 2 CSV</title>
+</head>
+<script type="text/javascript">
+    function Save2CSV(form) {
+        var str="";
+        var flds = form.elements;
+        var csvFld=null;
+        for (fx=0; fx < flds.length; fx++) {
+            var fld = flds[fx];
+            if (fld.type == "button") { continue; }
+            var fldName  = fld.getAttribute("name");
+            var fldValue = fld.value;
+            if ((fld.type=="radio") || (fld.type == "checkbox")) {
+                if (!fld.checked) { continue; }
+            }
+            if (fld.type=="select") {
+                if (!fld.selected) { continue;}
+            }
+            if (fld.getAttribute("name") == "csvdata") {
+                csvFld = fld;
+                continue;
+            }
+            str += fld.getAttribute("name") + ":" + fld.value + ",";
+        }
+        str = str.replace(/,$/,"");
+        if (csvFld != null) {
+            csvFld.value = str;
+        }
+        return false;
+    }
+</script>
+<body>
+
+<form name="Form1">
+    <br/><input type="text" name="field1" value="text field">
+    <br/><input type="password" name="password" value="password">
+    <br/><input type="checkbox" name="chkBox1" value="CheckValue1">Option 1 <input type="checkbox" name="chkBox1" value="CheckValue2">Option 2
+    <br/><input type="radio" name="radio1" value="RadioValue1">Radio Option 1 <input type="radio" name="radio1" value="RadioValue2">Option 2
+    <br/>
+            <select name="select1">
+                <option value="selOpt1">Select Option 1</option>
+                <option value="selOpt2">Select Option 2</option>
+                <option value="selOpt3">Select Option 3</option>
+                <option value="selOpt4">Select Option 4</option>
+            </select>
+    <br/><textarea name="csvdata" rows="5" cols="50"></textarea>
+    <br/><input type="button" name="submit" value="Submit" onclick="Save2CSV(this.form);">
+
+</form>
+</body>
+</html>
