@@ -35,6 +35,15 @@ h1 {
 }
 p {
   color: white;
+  text-align: left;
+  font-family:Arial;
+  padding-left: 50px;
+  padding-right: 50px;
+  line-height: 1.6;
+}
+
+.phomepage {
+  color: white;
   text-align: center;
   font-family:Arial;
   padding-left: 250px;
@@ -84,6 +93,7 @@ div {
 
 #navigation {
   text-align: right;
+  //position:fixed;
 
 }
 
@@ -185,10 +195,33 @@ a:hover {
         height: 200px;
 
     }
-form {
-        padding: 10px;
+.leftpane {
+        padding: 20px;
+        padding-left: 100px;
         text-align: left;
         color: white;
         font-family:Arial;
         line-height: 1.6;
+    }
+
+.rightpane {
+        padding: 20px;
+        padding-right: 50px;
+        text-align: left;
+        color: white;
+        font-family:Arial;
+        line-height: 1.6;
+
+    }
+
+.stickyElement {
+  // for some reason its stickyness is not working
+        //background-color: #c0c0c0;
+        //position:fixed;
+        //top:150;
+        //width:100%;
+        //z-index:1;
+        position: -webkit-sticky;  // required for Safari
+        position: sticky;
+        top: 0;
     }

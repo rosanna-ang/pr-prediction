@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-control" content="no-cache">
+  <title>SG Permanent Residence Predictor</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <link href="style.css" rel="stylesheet">
+
+</head>
+<body style="background-color: black;">
+  <div id="homebackground">
+  <div id="navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="survey.html">How it Works</a></li>
+      <li><a href="supporting-analysis.html">Supporting Analysis</a></li>
+      <li><a href="data.html">Data Reference</a></li>
+      <li><a href="author.html">About the Author</a></li>
+    </ul>
+  </div>
+  <div id="div1">
+      <h1>Coming soon.</h1>
+  </div>
+  <div class="sidebyside">
+    <div style="width: 100%;">
+      <div style="float: left; width: 50%;" >
+        <p>According to unofficial information, Singapore’s Immigration and Customs Agency (ICA) adopts a Points System to assess PR eligibility. Applicants will be graded points based on the following factors:
+
+        <form action="" class="leftpane">
+          Type of work pass / visa<br>
+            <input type="radio" name="pass" value="male"> Employment Pass<br>
+            <input type="radio" name="pass" value="female"> Permanent Employment Pass<br>
+            <input type="radio" name="pass" value="other"> S-Pass<br>
+            <input type="radio" name="pass" value="other"> EntrePass<br>
+            <input type="radio" name="pass" value="other"> Other<br>
+            <br>
+            Duration of stay in Singapore (years)<br>
+              <input type="text" name="duration"><br>
+            <br>
+            Marital status<br>
+              <input type="radio" name="maritalstatus" value="single"> Single<br>
+              <input type="radio" name="maritalstatus" value="married"> Married<br>
+              <input type="radio" name="maritalstatus" value="divorced"> Divorced<br>
+              <input type="radio" name="maritalstatus" value="widow"> Widow/widower<br>
+            <br>
+            Highest academic qualification <br>
+            <select class="form-control dropdown" id="education" name="education">
+              <option value="" selected="selected" disabled="disabled">-- select one --</option>
+              <option value="No formal education">No formal education</option>
+              <option value="Primary education">Primary education</option>
+              <option value="Secondary education">Secondary education or high school</option>
+              <option value="GED">GED</option>
+              <option value="Vocational qualification">Vocational qualification</option>
+              <option value="Bachelor's degree">Bachelor's degree</option>
+              <option value="Master's degree">Master's degree</option>
+              <option value="Doctorate or higher">Doctorate or higher</option>
+            </select><br>
+            Country where highest degree is attained<br>
+                <input type="text" name="degree"><br>
+              <br>
+            Basic monthly salary<br>
+              <input type="text" name="salary"><br>
+            <br>
+            Age<br>
+              <input type="text" name="age"><br>
+            <br>
+            Kinship ties (having family members from Singapore)<br>
+              <input type="radio" name="kinship" value="none"> None<br>
+              <input type="radio" name="kinship" value="immediate"> Immediate family as Singaporean / Singapore PR<br>
+              <input type="radio" name="kinship" value="extended"> Extended family as Singaporean / Singapore PR<br>
+            <br><br>
+            <input type="submit" class="btn">
+        </form>
+
+      </div>
+      <div  style="float: left; width: 40%;" class="stickyElement">
+        <div class="rightpane">
+          <h1>
+            Your results are
+          </h1>
+
+          <svg width="250" height="250" style="display: block; margin: auto;">
+            <circle cx="125" cy="125" r="100" fill="#aeaeae" />
+            <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="80px" font-family="Arial" dy=".3em">60%</text>
+          Sorry, your browser does not support inline SVG.
+          </svg>
+
+
+        </div>
+      </div>
+
+      <br style="clear: left;" />
+    </div>
+  </div>
+
+
+</div>
+</body>
+</html>
